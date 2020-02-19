@@ -17,3 +17,8 @@ cc_binary(
         name = "enums",
         srcs = ["enums.cpp"],
         )
+
+cc_binary(
+        name = "tuples",
+        srcs = ["tuples.cpp"],
+        )
