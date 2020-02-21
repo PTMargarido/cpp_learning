@@ -4,6 +4,11 @@ cc_binary(
         )
 
 cc_binary(
+        name = "interfaces",
+        srcs = ["interfaces.cpp"],
+        )
+
+cc_binary(
         name = "pointers_and_references",
         srcs = ["pointers_and_references.cpp"],
         )
