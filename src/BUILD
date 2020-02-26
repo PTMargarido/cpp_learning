@@ -4,6 +4,11 @@ cc_binary(
         )
 
 cc_binary(
+        name = "delete_qualifier",
+        srcs = ["delete_qualifier.cpp"],
+        )
+
+cc_binary(
         name = "singleton",
         srcs = ["singleton.cpp"],
         )
