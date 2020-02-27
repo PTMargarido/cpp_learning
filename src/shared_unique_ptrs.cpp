@@ -9,6 +9,14 @@ class IPrint
 {
     public:
     virtual void print() const = 0;
+
+    // Base class must have virtual destructor in order to call derived class
+    // destructor. With 'virtual ~IPrint()', ~Xerox() is invoked. Without virtual
+    // it is not.
+    virtual ~IPrint()
+    {
+        cout << "Destructor IPrint: " << this << endl;
+    };
 };
 
 class Xerox : public IPrint
@@ -21,7 +29,7 @@ class Xerox : public IPrint
 
     string model;
 
-    ~Xerox()
+    ~Xerox() override
     {
         cout << "Destructor Xerox: " << this << endl;
     }
