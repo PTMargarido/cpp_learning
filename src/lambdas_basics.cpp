@@ -22,7 +22,7 @@ int main ()
     vector<int> vec_test_transformed;
     
     // std::for_each with lambda applied to each element of the vector
-    for_each(vecTest.begin(), vecTest.end(), [nValue](int& value)
+    for_each(vecTest.begin(), vecTest.end(), [&](int& value)
     {
         if (value > nValue)
         {
@@ -38,17 +38,15 @@ int main ()
     nValue = 3;
 
     // std::transform with lambda applied to each element of the vector
-    transform(vecTest.begin(), vecTest.end(), vec_test_transformed.begin(), [nValue](int& value) -> int
+    transform(vecTest.begin(), vecTest.end(), vec_test_transformed.begin(), [nValue](int value) -> int
     {
         if (value > nValue)
         {
             value = nValue;
         }
+        return value;
         
     });
-
-    for(auto p: vecTest)
-        cout << p << endl;
 
     vector<string> vecString{"Hello","Friend"};
     vector<size_t> vecSizeStrings;
@@ -57,8 +55,4 @@ int main ()
     {
         return vecEntry.size();
     });
-
-    for(auto p: vecSizeStrings)
-        cout << p << endl;
-   
 }
