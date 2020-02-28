@@ -4,8 +4,8 @@ cc_binary(
         )
 
 cc_binary(
-        name = "algorithm",
-        srcs = ["algorithm.cpp"],
+        name = "non_modifying_algorithms",
+        srcs = ["non_modifying_algorithms.cpp"],
         )
 
 cc_binary(
