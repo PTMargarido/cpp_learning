@@ -102,4 +102,13 @@ int main ()
 
     auto mismatchIt = mismatch(vecMismatch1.cbegin(), vecMismatch1.cend(), vecMismatch2.cbegin());
     cout << *mismatchIt.first << endl;
+
+    // equal
+    cout << "--- std::equal ---" << endl;
+    vector<int> vecEqual1{1,2,3,4,5};
+    vector<int> vecEqual2{0,2,3,4,5};
+
+    auto bEqual = equal(vecEqual1.cbegin(), vecEqual1.cend(), vecEqual2.cbegin());
+    cout << bEqual << endl;
+
 } 
