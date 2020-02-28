@@ -4,6 +4,11 @@ cc_binary(
         )
 
 cc_binary(
+        name = "algorithm",
+        srcs = ["algorithm.cpp"],
+        )
+
+cc_binary(
         name = "lambdas_basics",
         srcs = ["lambdas_basics.cpp"],
         )
