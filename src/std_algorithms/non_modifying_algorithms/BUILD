@@ -42,8 +42,3 @@ cc_binary(
         name = "for_each_n",
         srcs = ["for_each_n.cpp"],
         )
-
-cc_binary(
-        name = "copy",
-        srcs = ["copy.cpp"],
-        )
