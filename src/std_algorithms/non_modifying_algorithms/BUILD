@@ -52,3 +52,8 @@ cc_binary(
         name = "adjacent_find",
         srcs = ["adjacent_find.cpp"],
         )
+
+cc_binary(
+        name = "search",
+        srcs = ["search.cpp"],
+        )
