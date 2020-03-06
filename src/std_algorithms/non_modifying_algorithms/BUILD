@@ -42,3 +42,13 @@ cc_binary(
         name = "for_each_n",
         srcs = ["for_each_n.cpp"],
         )
+
+cc_binary(
+        name = "find",
+        srcs = ["find.cpp"],
+        )
+
+cc_binary(
+        name = "adjacent_find",
+        srcs = ["adjacent_find.cpp"],
+        )
