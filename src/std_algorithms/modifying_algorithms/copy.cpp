@@ -15,7 +15,15 @@ int main ()
     copy(vecCopy1.begin(), vecCopy1.end(), back_inserter(vecCopy2));
     
     for (auto p: vecCopy2)
-    {
         cout << p << endl;
-    }
+
+    // copy_if
+    cout << "--- std::copy_if ---" << endl;
+    vector<int> vecCopyIf;
+    copy_if(vecCopy1.cbegin(), vecCopy1.cend(), back_inserter(vecCopyIf), [](int value){
+                return !(value % 3);
+            });
+    
+    for (auto p: vecCopyIf)
+        cout << p << endl;
 }
