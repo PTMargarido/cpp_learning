@@ -26,4 +26,20 @@ int main ()
     
     for (auto p: vecCopyIf)
         cout << p << endl;
+
+    // copy_n
+    cout << "--- std::copy_n ---" << endl;
+    vector<int> vecCopyN;
+    copy_n(vecCopy1.cbegin(), 4, back_inserter(vecCopyN));
+    
+    for (auto p: vecCopyN)
+        cout << p << endl;
+
+    // copy_backwards
+    cout << "--- std::copy_backwards ---" << endl;
+    vector<int> vecCopyBackwards(8);
+    copy_backward(vecCopy1.begin(), vecCopy1.end(), vecCopyBackwards.end());
+    
+    for (auto p: vecCopyBackwards)
+        cout << p << endl;
 }
