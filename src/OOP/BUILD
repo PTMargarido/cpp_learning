@@ -12,3 +12,8 @@ cc_binary(
         name = "interfaces",
         srcs = ["interfaces.cpp"],
         )
+
+cc_binary(
+        name = "mutable",
+        srcs = ["mutable.cpp"],
+        )
