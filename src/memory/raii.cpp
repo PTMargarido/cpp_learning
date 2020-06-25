@@ -12,7 +12,7 @@ class memHandler
 
     ~memHandler()
     {
-        std::cout << "Deleted array in " << arrHolder << std::endl;
+        std::cout << " -- Deleted array in " << arrHolder << std::endl;
         delete arrHolder;
     }
 
@@ -23,7 +23,7 @@ class memHandler
 void memAlloc(bool shouldThrow) {
 
   int *pArr = new int(1500);
-  std::cout << "Allocation memory in address " << pArr << std::endl;
+  std::cout << " -- Allocation memory in address " << pArr << std::endl;
   memHandler memHandle(pArr);
 
   // Could also imagine this as an early return. If you use a plain old
@@ -33,6 +33,8 @@ void memAlloc(bool shouldThrow) {
     std::cout << "Throwing exception" << std::endl;
     throw 1;
   }
+
+  std::cout << "Reached end of memAlloc" << std::endl;
 }
 
 void memAllocBadExample() {
