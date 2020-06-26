@@ -17,3 +17,8 @@ cc_binary(
         name = "tuples",
         srcs = ["tuples.cpp"],
         )
+
+cc_binary(
+        name = "structured_bindings",
+        srcs = ["structured_bindings.cpp"],
+        )
