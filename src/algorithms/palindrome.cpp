@@ -2,6 +2,7 @@
 #include <iostream>
 
 using namespace std;
+
 bool verifyPalindrome(const string& strPalindrome)
 {
     size_t strEnd = strPalindrome.size() - 1;
@@ -20,7 +21,7 @@ bool verifyPalindrome(const string& strPalindrome)
 }
 
 template <typename T>
-bool isPalindrome(const T& intPalindrome)
+constexpr bool isPalindrome(const T& intPalindrome)
 {
     return verifyPalindrome(to_string(intPalindrome));
 }
@@ -36,11 +37,9 @@ bool isPalindrome(const double& strPalindrome) = delete;
 
 int main()
 {
-    string testStr = "abbaa";
+    constexpr auto testStr =  "abba";
     cout << isPalindrome<string>(testStr) << endl;
-    int numberInt = 1222;
-    cout << isPalindrome<int>(numberInt) << endl;
-    numberInt = 1221;
+    constexpr int numberInt = 1221;
     cout << isPalindrome<int>(numberInt) << endl;
     return 0;
 }
