@@ -17,3 +17,8 @@ cc_binary(
         name = "raii",
         srcs = ["raii.cpp"],
         )
+
+cc_binary(
+        name = "weak_ptr",
+        srcs = ["weak_ptr.cpp"],
+        )

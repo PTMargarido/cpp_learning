@@ -1,7 +1,6 @@
 #include <iostream>
 #include <mutex>
 
-
 class memHandler
 {
     public:
@@ -25,6 +24,8 @@ void memAlloc(bool shouldThrow) {
   int *pArr = new int(1500);
   std::cout << " -- Allocation memory in address " << pArr << std::endl;
   memHandler memHandle(pArr);
+
+  int *pArr2 = new int(1500);
 
   // Could also imagine this as an early return. If you use a plain old
   // mutex, you have to remember to manually unlock before every return...
