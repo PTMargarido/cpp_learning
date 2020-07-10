@@ -22,3 +22,8 @@ cc_binary(
         name = "structured_bindings",
         srcs = ["structured_bindings.cpp"],
         )
+
+cc_binary(
+        name = "rvalues_lvalues",
+        srcs = ["rvalues_lvalues.cpp"],
+        )
