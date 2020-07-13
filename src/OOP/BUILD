@@ -17,3 +17,8 @@ cc_binary(
         name = "mutable",
         srcs = ["mutable.cpp"],
         )
+
+cc_binary(
+        name = "name_hiding",
+        srcs = ["name_hiding.cpp"],
+        )
