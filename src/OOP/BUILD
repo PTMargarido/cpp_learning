@@ -22,3 +22,8 @@ cc_binary(
         name = "name_hiding",
         srcs = ["name_hiding.cpp"],
         )
+
+cc_binary(
+        name = "virtual_destructor",
+        srcs = ["virtual_destructor.cpp"],
+        )
