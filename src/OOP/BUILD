@@ -27,3 +27,8 @@ cc_binary(
         name = "virtual_destructor",
         srcs = ["virtual_destructor.cpp"],
         )
+
+cc_binary(
+        name = "move_semantics",
+        srcs = ["move_semantics.cpp"],
+        )
