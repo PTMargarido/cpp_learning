@@ -32,3 +32,8 @@ cc_binary(
         name = "move_semantics",
         srcs = ["move_semantics.cpp"],
         )
+
+cc_binary(
+        name = "move_to_vector",
+        srcs = ["move_to_vector.cpp"],
+        )
