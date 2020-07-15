@@ -55,17 +55,30 @@ class String
             return *this;
         }
 
-        String& operator+ (String& other)
+        String operator+ (String& other)
+        {
+            String res;
+
+            res.m_Data = new char[m_Size + other.m_Size];
+
+            res.m_Size = m_Size + other.m_Size;
+
+            memcpy(res.m_Data, m_Data, m_Size);
+            memcpy(res.m_Data + m_Size, other.m_Data, other.m_Size);
+            return res;
+        }
+
+        String& operator+= (String& other)
         {
             int sizeHold = m_Size;
             char* strHold = new char[m_Size];
+
             memcpy(strHold, m_Data, m_Size);
 
             delete[] m_Data;
 
             m_Data = new char[m_Size + other.m_Size];
-
-            m_Size += other.m_Size;
+            m_Size = m_Size + other.m_Size;
 
             memcpy(m_Data, strHold, sizeHold);
             memcpy(m_Data + sizeHold, other.m_Data, other.m_Size);
@@ -74,6 +87,7 @@ class String
 
             return *this;
         }
+
 
         ~String()
         {
@@ -85,7 +99,7 @@ class String
             for (int i = 0; i < m_Size; i++)
                 std::cout << m_Data[i];
 
-            std::cout << " ";
+            std::cout << "\n";
 
         }
 
@@ -108,13 +122,23 @@ int main()
         vecStrings.push_back(String(A.c_str()));
     }
 
-    for (auto c: vecStrings)
-        c.Print();
+    std::cout << "------\n";
 
-    String str1("Pedro ");
-    String str2("Sara ");
 
-    String str3 = std::move(str1 + str2);
+    String strA("Hi");
+    String strB(" there");
+    String strC;
 
-    str3.Print();
+    strC = strA + strB;
+
+    strC.Print();
+    strA.Print();
+    strB.Print();
+
+    strA += strB;
+
+    strA.Print();
+    strB.Print();
+
+
 };
