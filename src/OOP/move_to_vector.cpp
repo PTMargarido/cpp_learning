@@ -23,6 +23,7 @@ class String
             m_Size = other.m_Size;
             m_Data = new char[m_Size];
             memcpy(m_Data, other.m_Data, m_Size);
+            std::cout << "Copying String object " << m_Data << "\n";
         }
 
         String(String&& other)
@@ -112,6 +113,7 @@ int main()
     std::string phrase("I like apples and strawberries");
 
     std::vector<String> vecStrings;
+    vecStrings.resize(5);
 
     std::istringstream iss(phrase);
     std::string A;
