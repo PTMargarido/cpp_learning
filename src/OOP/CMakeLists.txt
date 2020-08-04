@@ -1,0 +1,8 @@
+add_executable(delete_qualifier delete_qualifier.cpp)
+add_executable(interfaces interfaces.cpp)
+add_executable(move_semantics move_semantics.cpp)
+add_executable(move_to_vector move_to_vector.cpp)
+add_executable(mutable mutable.cpp)
+add_executable(name_hiding name_hiding.cpp)
+add_executable(singleton singleton.cpp)
+add_executable(virtual_destructor virtual_destructor.cpp)

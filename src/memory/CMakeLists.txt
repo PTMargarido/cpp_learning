@@ -1,0 +1,5 @@
+add_executable(pointers_and_references pointers_and_references.cpp)
+add_executable(raii raii.cpp)
+add_executable(shared_unique_ptrs shared_unique_ptrs.cpp)
+add_executable(weak_ptr weak_ptr.cpp)
+add_executable(static_keyword static_keyword.cpp)

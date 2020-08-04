@@ -8,8 +8,6 @@
 
 using namespace std;
 
-
-
 auto smallMinElement(vector<int> vec)
 {
     int count = 0;
@@ -54,11 +52,8 @@ int main()
     
     random_shuffle(vec.begin(), vec.end());
 
-    cout << "--- --- ---\n";
-
     selection_sort(vec);
     
     for (auto c: vec)
         cout << c << endl;
-    cout << "--- --- ---\n";
 }

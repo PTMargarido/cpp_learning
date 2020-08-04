@@ -1,0 +1,4 @@
+add_executable(binary_search binary_search.cpp)
+add_executable(linked_list linked_list.cpp)
+add_executable(selection_sort selection_sort.cpp)
+add_executable(palindrome palindrome.cpp)

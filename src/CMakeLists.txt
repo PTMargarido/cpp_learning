@@ -1,0 +1,13 @@
+set(ALGORITHMS algorithms)
+set(OOP OOP)
+set(MEMORY memory)
+set(BASICS basics)
+set(STD_ALGORITHMS std_algorithms)
+set(STD_CONTAINERS std_containers)
+
+add_subdirectory(${ALGORITHMS})
+add_subdirectory(${OOP})
+add_subdirectory(${MEMORY})
+add_subdirectory(${BASICS})
+add_subdirectory(${STD_CONTAINERS})
+add_subdirectory(${STD_ALGORITHMS})

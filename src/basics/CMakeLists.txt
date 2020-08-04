@@ -1,0 +1,6 @@
+add_executable(enums enums.cpp)
+add_executable(lambdas_basics lambdas_basics.cpp)
+add_executable(tuples tuples.cpp)
+add_executable(rvalues_lvalues rvalues_lvalues.cpp)
+add_executable(typedef_alias typedef_alias.cpp)
+add_executable(structured_bindings structured_bindings.cpp)
