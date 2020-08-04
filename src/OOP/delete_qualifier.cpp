@@ -17,7 +17,7 @@ int main()
     auto x = factorial(5);
     cout << x << endl;
     cout << "--------" << endl;
-    auto z = factorial(5.5f);
-    cout << z << endl;
+    //auto z = factorial(5.5f);
+    //cout << z << endl;
     cout << "--------" << endl;
 }
