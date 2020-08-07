@@ -1,1 +1,6 @@
 add_executable(copy copy.cpp)
+add_executable(copy_backwards copy_backwards.cpp)
+add_executable(copy_if copy_if.cpp)
+add_executable(copy_n copy_n.cpp)
+add_executable(fill fill.cpp)
+add_executable(move move.cpp)
