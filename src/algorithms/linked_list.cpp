@@ -75,19 +75,36 @@ void printNames(ListNode* head)
     }
 }
 
+ListNode* invertLinkedList(ListNode* head)
+{
+    ListNode* prev = nullptr;
+    ListNode* next = nullptr;
+    ListNode* first = nullptr;
+
+    while (head != nullptr)
+    {
+        if (!head->m_pNext)
+            first = head;
+        next = head->m_pNext;
+        head->m_pNext = head->m_pPrevious;
+        head->m_pPrevious = next;
+        head = next;
+    }
+
+    return first;
+}
+
 
 int main()
 {
    ListNode* linkedList = new ListNode("Entry1");
-   linkedList->insertAtEnd("Entry1");
    linkedList->insertAtEnd("Entry2");
    linkedList->insertAtEnd("Entry3");
+   linkedList->insertAtEnd("Entry4");
+   linkedList->insertAtEnd("Entry5");
 
-   printNames(linkedList);
-
-   linkedList->dropList();
-
-
-   printNames(linkedList);
+    printNames(linkedList);
+    auto invertedList = invertLinkedList(linkedList);
+    printNames(invertedList);
 
 }
