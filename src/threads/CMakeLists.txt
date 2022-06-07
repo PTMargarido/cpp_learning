@@ -1,0 +1,2 @@
+add_executable(threads_conditional_variable threads_conditional_variable.cpp)
+add_executable(threads_scoped_lock threads_scoped_lock.cpp)
